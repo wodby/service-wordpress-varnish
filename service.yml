@@ -1,0 +1,20 @@
+name: wordpress-varnish
+type: service
+from: varnish
+title: Varnish (WordPress)
+
+update: auto
+    
+labels:
+- wordpress
+- varnish
+
+configs:
+- name: wordpress
+  title: Drupal preset
+  filepath: /etc/gotpl/preset/wordpress.vcl.tmpl
+  config: wordpress.vcl.tmpl
+
+env:
+- name: VARNISH_CONFIG_PRESET
+  value: wordpress
