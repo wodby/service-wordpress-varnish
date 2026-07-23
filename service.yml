@@ -2,7 +2,7 @@ name: wordpress-varnish
 type: service
 from: varnish
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.3"
+fromVersion: "1.0.4"
 title: Varnish (WordPress)
 
 
@@ -12,9 +12,11 @@ labels:
 
 configs:
 - name: wordpress
-  title: Drupal preset
+  title: WordPress preset
   filepath: /etc/gotpl/preset/wordpress.vcl.tmpl
-  config: wordpress.vcl.tmpl
+  default:
+    source: image
+    filepath: /etc/gotpl/presets/wordpress.vcl.tmpl
 
 env:
 - name: VARNISH_CONFIG_PRESET
