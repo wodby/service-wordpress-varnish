@@ -2,7 +2,7 @@ name: wordpress-varnish
 type: service
 from: varnish
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.0.2"
+fromVersion: "1.0.3"
 title: Varnish (WordPress)
 
 
