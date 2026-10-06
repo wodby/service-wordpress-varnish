@@ -1,6 +1,7 @@
 name: wordpress-varnish
 type: service
 from: varnish
+guidance: GUIDANCE.md
 fromVersionConstraint: "^1.0.0"
 fromVersion: "1.0.14"
 title: Varnish (WordPress)
